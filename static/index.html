@@ -243,11 +243,125 @@ $ git branch -d newImage
 				</section>
 
 				<section>
-					<h2> A very basic workflow with branches </h2>
+					<section>
+						<h2> A very basic workflow with branches </h2>
 
+					</section>
+					<section>
+						<p> Initial branch status </p>
+						<img src="img/basic-branching-1.png">
+					</section>
+					<section>
+						<p> Create a branch iss53: `$ git checkout -b iss53`</p>
+						<img src="img/basic-branching-2.png">
+
+					</section>
+					<section>
+						<p> Do some work on it, how does it look now after committing?</p>
+						<img src="img/basic-branching-3.png">
+					</section>
+
+					<section>
+						<p> Need to work on a hotfix/bugfix urgently ? </p>
+						<p><pre><code>
+$ #make sure you have commit everything on your iss53 branch
+$ # checkout master branch
+$ git checkout master 
+$ # create a hotfix branch
+$ git checkout -b hotfix
+$ # do some work and commit
+$ gt commit -a -m 'your commit msg'
+
+						</code></pre></p>
+					</section>
+					<section>
+						<p> How does my graph looks now ?</p>
+						<img src="img/basic-branching-4.png">
+					</section>
+					<section>
+						<p> Now I want to merge my hotfix to master, so that I can deploy the bugfix to live</p>
+						<img src="img/basic-branching-5.png">
+					</section>
+					<section>
+						<p> Everything is good with hotfix, what to do with that branch now ?</p>
+						<p><pre><code> $ git branch -d hotfix</code></pre></p>
+					</section>
+					<section>
+						<p> I want to resume my work on iss53 now</p>
+						<p><pre><code> $ git checkout iss53</code></pre></p>
+						<img src="img/basic-branching-6.png">
+						<p style="font-size: 20px;"> When we switch branch in git, it shuffles the files, folders and assets to reflect the exact status of that git branch. </p>
+					</section>
 				</section>
+
 				<section>
-					<p></p>
+					<section>
+						<h2> Basic Merging </h2>
+					</section>
+					<section>
+						<p> I have finished working with iss53, looks good and tested. What now ?</p>
+						<p> Merge iss53 with master so that we can test and deploy </p>
+						<p> <pre><code>
+$ # checkout to the branch we want to merge
+$ # in this case `master` branch
+$ # make sure you have committed all the changes in iss53
+$ git checkout master
+$ # merge the iss53 branch
+$ git merge iss53
+						</code></pre></p>
+					</section>
+
+					<section>
+						<img src="img/basic-merging-2.png">
+					</section>
+				</section>
+
+				<section>
+					<p> How about rebasing instead of merging ?</p>
+					<ul>
+						<li class="fragment"> Great that you know about it. </li>
+						<li class="fragment"> This is another very cool command which you can use instead of merge</li>
+						<li class="fragment"> We would like to preserve our repo history of <b>what actually happened (git merge)</b> as ooposed to <b>how the project is made.(git rebase)</b> </li>
+						<li class="fragment"> Choice for me is simple. `git merge`</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Merge conflicts </h2>
+					<p> Homework to read up on this ?</p>
+					<p><pre><code>
+$ #commands you may find interesting while merging conflicts
+$ git status
+$ git merge
+$ git mergetool
+
+					</code></pre></p>
+				</section>
+
+				<section>
+					<h2> Branch Management </h2>
+					<p><pre><code>
+$ # command to check branch
+$ git branch
+$ # Check the last commit on each branch
+$ git branch -v
+$ # Branches that are not merged
+$ git branch --no-merged
+$ # Branches that are merged and safe to delete
+$ git branch --merged
+$ # Force delete a branch and possibly screw things up
+$ git branch -D `branchName`
+$ # Please never do this. If you have accidentally done it, ask kooipeng!
+					</code></pre></p>
+				</section>
+
+				<section>
+					<h3>References:</h3>
+					<ul>
+						<li> http://git-scm.com/book/en/v2/ </li>
+						<li> http://git-scm.com/ </li>
+						<li> Please read that book. It's awesome! </li>
+					</ul>
 				</section>
 
 			</div>
