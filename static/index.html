@@ -243,11 +243,77 @@ $ git branch -d newImage
 				</section>
 
 				<section>
-					<h2> A very basic workflow with branches </h2>
+					<section>
+						<h2> A very basic workflow with branches </h2>
 
+					</section>
+					<section>
+						<p> Initial branch status </p>
+						<img src="img/basic-branching-1.png">
+					</section>
+					<section>
+						<p> Create a branch iss53: `$ git checkout -b iss53`</p>
+						<img src="img/basic-branching-2.png">
+
+					</section>
+					<section>
+						<p> Do some work on it, how does it look now after committing?</p>
+						<img src="img/basic-branching-3.png">
+					</section>
+
+					<section>
+						<p> Need to work on a hotfix/bugfix urgently ? </p>
+						<p><pre><code>
+$ #make sure you have commit everything on your iss53 branch
+$ # checkout master branch
+$ git checkout master 
+$ # create a hotfix branch
+$ git checkout -b hotfix
+$ # do some work and commit
+$ gt commit -a -m 'your commit msg'
+
+						</code></pre></p>
+					</section>
+					<section>
+						<p> How does my graph looks now ?</p>
+						<img src="img/basic-branching-4.png">
+					</section>
+					<section>
+						<p> Now I want to merge my hotfix to master, so that I can deploy the bugfix to live</p>
+						<img src="img/basic-branching-5.png">
+					</section>
+					<section>
+						<p> Everything is good with hotfix, what to do with that branch now ?</p>
+						<p><pre><code> $ git branch -d hotfix</code></pre></p>
+					</section>
+					<section>
+						<p> I want to resume my work on iss53 now</p>
+						<p><pre><code> $ git checkout iss53</code></pre></p>
+						<img src="img/basic-branching-6.png">
+						<p style="font-size: 20px;"> When we switch branch in git, it shuffles the files, folders and assets to reflect the exact status of that git branch. </p>
+					</section>
 				</section>
+
 				<section>
-					<p></p>
+					<section>
+						<h2> Basic Merging </h2>
+					</section>
+					<section>
+						<p> I have finished wrking with iss53, looks good and tested. What now ?</p>
+						<p> Merge iss53 with master so that we can test and deploy </p>
+						<p> <pre><code>
+$ # checkout to the branch we want to merge
+$ # in this case `master` branch
+$ # make sure you have committed all the changes in iss53
+$ git checkout master
+$ # merge the iss53 branch
+$ git merge iss53
+						</code></pre></p>
+					</section>
+
+					<section>
+						<img src="img/basic-merging-2.png">
+					</section>
 				</section>
 
 			</div>
