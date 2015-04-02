@@ -299,7 +299,7 @@ $ gt commit -a -m 'your commit msg'
 						<h2> Basic Merging </h2>
 					</section>
 					<section>
-						<p> I have finished wrking with iss53, looks good and tested. What now ?</p>
+						<p> I have finished working with iss53, looks good and tested. What now ?</p>
 						<p> Merge iss53 with master so that we can test and deploy </p>
 						<p> <pre><code>
 $ # checkout to the branch we want to merge
@@ -317,11 +317,24 @@ $ git merge iss53
 				</section>
 
 				<section>
+					<p> How about rebasing instead of merging ?</p>
+					<ul>
+						<li class="fragment"> Great that you know about it. </li>
+						<li class="fragment"> This is another very cool command which you can use instead of merge</li>
+						<li class="fragment"> We would like to preserve our repo history of <b>what actually happened (git merge)</b> as ooposed to <b>how the project is made.(git rebase)</b> </li>
+						<li class="fragment"> Choice for me is simple. `git merge`</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2> Merge conflicts </h2>
 					<p> Homework to read up on this ?</p>
 					<p><pre><code>
-$ #command you may find interesting while merging conflicts
+$ #commands you may find interesting while merging conflicts
 $ git status
+$ git merge
+$ git mergetool
+
 					</code></pre></p>
 				</section>
 
@@ -336,13 +349,20 @@ $ # Branches that are not merged
 $ git branch --no-merged
 $ # Branches that are merged and safe to delete
 $ git branch --merged
-$ # Force delete a branch and possible screw things up
+$ # Force delete a branch and possibly screw things up
 $ git branch -D `branchName`
-$ # Please never do this. Thnx!
+$ # Please never do this. If you have accidentally done it, ask kooipeng!
 					</code></pre></p>
 				</section>
 
-
+				<section>
+					<h3>References:</h3>
+					<ul>
+						<li> http://git-scm.com/book/en/v2/ </li>
+						<li> http://git-scm.com/ </li>
+						<li> Please read that book. It's awesome! </li>
+					</ul>
+				</section>
 
 			</div>
 
