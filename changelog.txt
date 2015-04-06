@@ -1,2 +1,3 @@
-#this is an example changelog file
-#another example data goes into changelog file
+#v0.1
+- Adding readme
+- Addinginitial files and slides
