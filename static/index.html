@@ -366,6 +366,20 @@ $ # Please never do this. If you have accidentally done it, ask kooipeng!
 				</section>
 
 				<section>
+					<h2> Rules </h2>
+					<ul>
+						<li class="fragment"> Only trivial changes goes into develop branch </li>
+						<li class="fragment"> Features are always built in a feature branch, no direct commit to develop branch </li>
+						<li class="fragment"> Commit message should always have details of changes </li>
+						<li class="fragment"> Commit as often as you can </li>
+						<li class="fragment"> Avoid huge changes in single commit </li>
+						<li class="fragment"> Commit should always include story id or issue id </li>
+						<li class="fragment"> Use git flow in your source tree to start feature/bug fixes / releases </li>
+						<li class="fragment">  Finish the feature after the pull request is merged with develop </li>
+					</ul>
+				</section>
+
+				<section>
 					<h2> Practical work !</h2>
 					<ul>
 						<li class="fragment"> Fork this repo: </li>
@@ -376,8 +390,48 @@ $ # Please never do this. If you have accidentally done it, ask kooipeng!
 				</section>
 
 				<section>
+					<h2> More practical works! </h2>
+					<li class="fragment"> Clone the repo </li>
+					<li class="fragment"> Start a git flow workflow </li>
+					<li class="fragment"> Solve issues and build features </li>
+					<li class="fragment"> Push the feature to github </li>
+					<li class="fragment"> Create a pull request </li>
+					<li class="fragment"> If the feature is finished and merged, use source tree to finish it </li>
+					<li class="fragment"> Repeat !</li>
+				</section>
+
+				<section>
+					<h2> Releases lifecycle </h2>
+					<ul>
+						<li class="fragment"> Always fork off develop </li>
+						<li class="fragment"> Create release branch </li>
+						<li class="fragment"> Stories to work in the release.</li>
+						<li class="fragment"> Finishing a release. </li>
+						<li class="fragment"> All the fixes related to release will be pushed to release branch </li>
+						<li class="fragment"> After finishing release the code will get merged with master AND develop </li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Hotfixes lifecycle </h2>
+					<ul>
+						<li class="fragment"> Always fork off master branch </li>
+						<li class="fragment"> Create hotfixes branch. </li>
+						<li class="fragment"> Fix the bug! </li>
+						<li class="fragment"> Send a pull request </li>
+						<li class="fragment"> Code review </li>
+						<li class="fragment"> Finihsh hotfixes! </li>
+						<li class="fragment"> Merge with master AND develop branch </li>
+					</ul>
+				</section>
+
+
+
+				<section>
 					<h2> Questions! </h2>
 				</section>
+
+				
 
 				<section>
 					<h3>References:</h3>
